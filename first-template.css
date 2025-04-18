@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:kanit,sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.fond {
+    background-image: url("first_project_card/photos/montain.jpg");
+    background-repeat: no-repeat;
+    background-size:100% auto ;
+    background-position: center;
+    height: 90vh;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top:1.5rem;
+}
+.fond h1{
+    color: rgb(16, 202, 183);
+    font-size:2.5rem;
+    line-height:2rem;
+    font-weight:700;
+    letter-spacing:2px;
+    padding-block: 12rem;  
+}
+.fond p {
+    color: rgb(33, 31, 31);
+    letter-spacing:2px;
+    font-weight:300;
+    padding: .2rem;
+}
+.fond p:first-of-type {
+    margin-top: -10rem;
+}
+.open-close::before {
+    content:"";
+    height:1.2rem;
+    width:0.2rem;
+    background: black;
+    display: inline-block;     
+}
+.open-close::after {
+    content:"";
+    height:0.9rem;
+    width:0.9rem;
+    border-radius: 50%;
+    display: inline-block;  
+    border: 4px solid  rgb(16, 202, 183);;
+}
+.open-close {
+    display: flex;
+    margin-left: 12rem;
+    margin-top: 1rem;
+    align-items: center;
+    column-gap: 0.3rem;
+}
+span::after {
+    content:"";
+    height: 0.1rem;
+    width: 1.8rem;
+    background: rgb(66, 62, 62);
+    display: block;
+    margin-block:0.4rem;
+}
+menu {
+    position: absolute;
+    top:15px;
+    right: 15rem; 
+}
+li{
+    list-style-type:none;
+    border-top:2px solid rgb(234, 227, 227);
+    padding-block: 7px;
+}
+ul {
+    display: none;
+    background-color: rgb(245, 242, 237);
+    width: 180px;
+    height: 10rem;
+    text-align: start;
+    padding-left: 25px;
+    position: absolute;   
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 3s ease, visibility 0.3s ease;
+    transition-delay: 2s; /* Délai avant que la transition ne commence */
+}
+.burger:hover ~ ul {
+    display: block;
+    opacity: 1; 
+    visibility: visible;
+ } 
+ .burger span:nth-child(2)::after {
+    width: 1rem;
+    margin-left: auto;
+    transition: 1s;
+}
+ .burger:hover span:nth-child(2)::after {
+    width: 1.8rem;  
+}
+.one article p {
+    color: rgb(148, 144, 144);
+}
+.one {
+    background-color: #f6f1f1;
+    display: flex;
+    justify-content: center;
+    column-gap:5rem;
+    text-align: center;
+    padding: 5rem;
+    height: auto;
+}
+.one article h1{
+    margin-block: 2rem;
+}
+.two h1 {
+    color: rgb(233, 231, 231);
+    font-size: 6rem;
+    text-align: center;
+}
+.two h2{
+    font-size:1.1rem ;
+    color: rgb(154, 146, 146);
+    font-weight: normal;
+    text-align: center;
+    margin-top: -2.8rem;
+}
+.image-container {
+   position: relative;
+}
+.image-container::after {
+    content: "";
+    height: 22rem;
+    width: 5rem;
+    background-color: rgb(55, 54, 54);
+    left: 18rem;
+    top: -3rem;
+    position: absolute;z-index: -1; 
+}
+img {
+    height: 16rem;
+    width: 14rem; 
+}
+pre {width : 35rem}
+.three div,h3 {
+    display: inline-block; 
+    vertical-align:top;
+}
+.three div {
+    margin-right: 1rem;
+}
+.three {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(400px,1fr));
+    grid-template-rows: repeat(2,10rem);
+    margin-top: 5rem;
+    margin-left: 7rem;
+    grid-template-areas: 
+    "graphic design mountain"
+    "ui development mountain";  
+    gap: 1rem; 
+}
+.three article:nth-of-type(1){
+   grid-area:graphic;
+}
+.three article:nth-of-type(2){
+   grid-area:design;
+}
+.three article:nth-of-type(3){
+   grid-area:ui;
+}
+.three article:nth-of-type(4){
+   grid-area:development;
+}
+.three .image-container {
+    grid-area: mountain;
+    margin-right: 5rem;
+}
+.four {
+    background-color: #f7f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    margin: 0 auto;
+    justify-content: space-evenly; 
+}
+.little-container {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 5rem;
+}
+.four figure:nth-of-type(1) {
+    max-width: 25%;
+    background-color: #ffffff;
+}
+.four figure:nth-of-type(3){
+    max-width: 25%;
+    background-color: #ffffff;
+}
+.four figure:nth-of-type(2){
+    width: 25%;
+    background-color:#ffffff;
+}
+figure {
+    text-align: center;  
+}
+img {
+    width: 100%;
+}
+figure p {
+    text-align: center;
+}
+.five img {
+    width: 16rem;
+    height: 20rem;
+    margin: 5rem;
+}
+.photo-container::before {
+    content: "";
+    height: 26rem;
+    width: 5rem;
+    background-color: rgb(229, 228, 228);
+    left: 4rem;
+    top: 2rem;
+    position: absolute;
+    z-index: -1;
+}
+.photo-container::after {
+    content: "";
+    height: 21rem;
+    width: 6rem;
+    background-color: rgb(16, 202, 183);
+    left: 18rem;
+    top: 2rem;
+    position: absolute;
+    z-index: -1;
+}
+.photo-container {
+    position: relative;
+}
+.ruse::after {
+    content: "";
+    height: 5rem;
+    width: 10rem;
+    background-color: rgb(16, 202, 183);
+    left: 21rem;
+    top: 18rem;
+    position: absolute;
+    z-index: -1;
+}
+.five {
+    display: flex;
+    width: 80%;
+    margin-left: 5rem;
+    column-gap: 10rem;
+}
+.fakra {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content:space-evenly;
+    
+}
+.fakra p:first-of-type {
+    color: black;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+    
+}
+.fakra p:last-of-type {
+    color: rgb(169, 167, 167);
+    margin-top: 0.1rem;
+
+}
+.fakra div {
+    height: 0.1rem;
+    width: 25rem;
+    background-color: rgb(13, 110, 100);
+    
+}
+.six {
+    background-color: rgb(246, 241, 241);
+    padding: 2rem;
+}
+.seven {
+    background-color:#2c4755;
+    height: 5rem;
+    color: #f6f1f1;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.six p:nth-of-type(1){
+    color: #2c4755;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+a {
+    color: rgb(16, 202, 183);
+    font-size: 1.5rem;
+    font-weight: 800;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin-block: 1rem;
+}
+.social-media {
+    display: flex;
+    justify-content:center;
+    column-gap: 1rem;
+}
+.social-media p{
+    color: gray!important;
+    font-size: 1rem !important;
+    font-weight: normal !important;
+}
+.six .two {
+    margin-bottom: 4rem;
+}
+@media (max-width: 900px) {
+    .three {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "graphic"
+        "design"
+        "ui"
+        "development"
+        "mountain";
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+  
