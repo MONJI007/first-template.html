@@ -8,7 +8,7 @@ body{
     overflow-x: hidden;
 }
 .fond {
-    background-image: url("first_project_card/photos/montain.jpg");
+    background-image: url("montain.jpg");
     background-repeat: no-repeat;
     background-size:100% auto ;
     background-position: center;
