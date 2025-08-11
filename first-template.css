@@ -8,31 +8,58 @@ body{
     overflow-x: hidden;
 }
 .fond {
-    background-image: url("montain.jpg");
-    background-repeat: no-repeat;
-    background-size:100% auto ;
-    background-position: center;
+    position: relative;
     height: 90vh;
     text-transform: capitalize;
     text-align: center;
-    margin-top:1.5rem;
+    margin-top: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.fond h1{
+
+/* Style pour la vidéo d'arrière-plan */
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
+/* Contenu par-dessus la vidéo */
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content-overlay h1{
     color: rgb(16, 202, 183);
-    font-size:2.5rem;
-    line-height:2rem;
-    font-weight:700;
-    letter-spacing:2px;
-    padding-block: 12rem;  
+    font-size: 2.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.fond p {
+
+.content-overlay p {
     color: rgb(33, 31, 31);
-    letter-spacing:2px;
-    font-weight:300;
-    padding: .2rem;
-}
-.fond p:first-of-type {
-    margin-top: -10rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    padding: 0.2rem;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 .open-close::before {
     content:"";
